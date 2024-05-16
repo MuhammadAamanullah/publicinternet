@@ -5,7 +5,7 @@ class CreateInternetSpeeds < ActiveRecord::Migration[7.1]
       t.float :download_speed
      
 
-      t.references :place, foreign_key: true
+      t.references :place, foreign_key: true, index: true, null: false, type: :uuid
      
       t.timestamps
     end
